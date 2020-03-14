@@ -5,7 +5,7 @@ class Hero extends Person {
         super(name);
     }
 
-    renderHero() {
+    render() {
         return `
         <div>
         <h3 id="heroName">${this.name}</h3>

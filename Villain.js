@@ -5,7 +5,7 @@ class Villian extends Person {
         super(name);
     }
 
-    renderVillian() {
+    render() {
         return `
         <div>
         <h3 id="villianName">${this.name}</h3>

@@ -16,18 +16,18 @@ playerVillian.equipWeapon(new weapon("arrow"));
 
 //get elements for each container inside index.html and render HTML
 // for hero
-const heroContainer = document.getElementById('heroContainer')
-heroContainer.innerHTML = player1.renderHero();
+let heroContainer = document.getElementById('heroContainer')
+heroContainer.innerHTML = player1.render();
 
 //for villian
-const villianContainer = document.getElementById('villianContainer')
-villianContainer.innerHTML = playerVillian.renderVillian();
+let villianContainer = document.getElementById('villianContainer')
+villianContainer.innerHTML = playerVillian.render();
 
-// these variables are change every time 
-var playerHeroHealth = document.getElementById('heroHealth');
-var playerVillianHealth = document.getElementById('villianHealth');
+// get elements of DOM for health
+let playerHeroHealth = document.getElementById('heroHealth');
+let playerVillianHealth = document.getElementById('villianHealth');
 
-//initiate the button by click ebent listner
+//initiate the button by click event listner
 
 document.getElementById('attackButtonHero').addEventListener('click', function() {
     playerHero.attack(playerVillian);
@@ -40,7 +40,7 @@ document.getElementById('attackButtonHero').addEventListener('click', function()
 document.getElementById('attackButtonVillian').addEventListener('click', function() {
     playerVillian.attack(playerHero);
     if (playerHero.health <= 0) {
-        alert("Villian won!");
+        alert("sad! Villian won!");
     }
     playerHeroHealth.innerHTML = playerHero.health;
 });
